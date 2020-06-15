@@ -21,6 +21,8 @@
         <activity android:name=".BarrierActivity" />
         <activity android:name=".CircleConstraintsActivity" />
         <activity android:name=".ClickActivity" />
+        <activity android:name=".MainActivity1"/>
+        <activity android:name=".MainActivity2"/>
     </application>
 
 </manifest>
