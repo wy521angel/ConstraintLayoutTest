@@ -2,10 +2,12 @@ package com.example.constraintlayouttest;
 
 import android.animation.ValueAnimator;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.concurrent.TimeUnit;
 

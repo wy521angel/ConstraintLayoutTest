@@ -1,12 +1,13 @@
 package com.example.constraintlayouttest;
 
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.constraint.Placeholder;
-import android.support.v7.app.AppCompatActivity;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.Placeholder;
 
 public class MainActivity2 extends AppCompatActivity {
 
