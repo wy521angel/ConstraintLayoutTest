@@ -1,0 +1,75 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/hello1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="Hello"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/world1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="World"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/hello1"
+        app:layout_constraintStart_toEndOf="@id/hello1"
+        app:layout_constraintTop_toTopOf="@id/hello1" />
+
+    <TextView
+        android:id="@+id/explain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="使用constraintTop_toTopOf与constraintBottom_toBottomOf居中对齐"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hello1" />
+
+    <TextView
+        android:id="@+id/hello2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="Hello"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explain1" />
+
+    <TextView
+        android:id="@+id/world2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="World"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/hello2"
+        app:layout_constraintStart_toEndOf="@id/hello2" />
+
+    <TextView
+        android:id="@+id/explain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="使用constraintBaseline_toBaselineOf居中对齐"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hello2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
