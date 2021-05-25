@@ -14,6 +14,7 @@ public class DemoActivity extends AppCompatActivity {
     public static String TYPE = "type";
     public static int FLOW = 1;
     public static int LAYER = 2;
+    public static int HELPER = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,9 @@ public class DemoActivity extends AppCompatActivity {
                     setContentView(R.layout.activity_layer);
                     Layer layer = findViewById(R.id.layer);
                     addAnimator(layer);
+                    break;
+                case 3:
+                    setContentView(R.layout.activity_constrainthelper);
                     break;
                 default:
                     break;
