@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp">
+
+        <Button
+            android:id="@+id/bt_flow_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A" />
+
+        <Button
+            android:id="@+id/bt_flow_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B" />
+
+        <Button
+            android:id="@+id/bt_flow_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/bt_flow_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D" />
+
+        <Button
+            android:id="@+id/bt_flow_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow_test1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="bt_flow_a,bt_flow_b,bt_flow_c,bt_flow_d,bt_flow_e"
+            app:flow_horizontalGap="30dp"
+            app:flow_verticalGap="10dp"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_A"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_B"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="B"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_C"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_D"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="D"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_E"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="E"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_F"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="F"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_G"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="G"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            app:constraint_referenced_ids="tv_A,tv_B,tv_C,tv_D,tv_E,tv_F,tv_G"
+            app:flow_horizontalGap="30dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_maxElementsWrap="4"
+            app:flow_verticalGap="30dp"
+            app:flow_wrapMode="chain"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_A1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_B1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="B"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_C1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_D1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="D"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_E1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="E"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_F1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="F"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_G1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="G"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:orientation="vertical"
+            app:constraint_referenced_ids="tv_A1,tv_B1,tv_C1,tv_D1,tv_E1,tv_F1,tv_G1"
+            app:flow_horizontalGap="30dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_maxElementsWrap="4"
+            app:flow_verticalAlign="top"
+            app:flow_verticalGap="30dp"
+            app:flow_wrapMode="chain"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_A2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_B2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="B"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_C2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_D2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="D"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_E2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="E"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_F2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="F"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <TextView
+            android:id="@+id/tv_G2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="G"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/bt_flow_d" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="tv_A2,tv_B2,tv_C2,tv_D2,tv_E2,tv_F2,tv_G2"
+            app:flow_horizontalBias="0.3"
+            app:flow_horizontalGap="30dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_maxElementsWrap="3"
+            app:flow_verticalGap="30dp"
+            app:flow_wrapMode="none"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
