@@ -9,6 +9,7 @@ public class TestActivity extends AppCompatActivity {
     private int type = 0;
     public static String TYPE = "type";
     public static int BASELINE = 1;
+    public static int MARGIN = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +23,12 @@ public class TestActivity extends AppCompatActivity {
                 case 1:
                     setContentView(R.layout.activity_baseline);
                     break;
+                case 2:
+                    setContentView(R.layout.activity_margin);
+                    break;
                 default:
                     break;
             }
         }
-
-
-
     }
 }

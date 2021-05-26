@@ -1,0 +1,73 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/vA"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vB"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="-30dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="B"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/vA"
+        app:layout_constraintTop_toBottomOf="@id/vA" />
+
+
+    <TextView
+        android:id="@+id/vA2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vB" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/vA2"
+        app:layout_constraintEnd_toEndOf="@id/vA2" />
+
+    <TextView
+        android:id="@+id/vB2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="B"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/space"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

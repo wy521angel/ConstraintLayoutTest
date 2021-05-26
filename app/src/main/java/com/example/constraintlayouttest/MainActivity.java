@@ -10,7 +10,7 @@ import android.widget.ListView;
 public class MainActivity extends ListActivity {
 
 
-    private String[] titles = {"Enforcing constraints", "Percent Dimensions", "Barrier", "Group", "围绕旋转", "点击布局重新排列", "模板功能", "动态替换", "Baseline 对齐"};
+    private String[] titles = {"Enforcing constraints", "Percent Dimensions", "Barrier", "Group", "围绕旋转", "点击布局重新排列", "模板功能", "动态替换", "Baseline 对齐", "边距处理"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,9 @@ public class MainActivity extends ListActivity {
                 break;
             case 8:
                 startActivity(new Intent(this, TestActivity.class).putExtra(TestActivity.TYPE, TestActivity.BASELINE));
+                break;
+            case 9:
+                startActivity(new Intent(this, TestActivity.class).putExtra(TestActivity.TYPE, TestActivity.MARGIN));
                 break;
 
         }
