@@ -10,7 +10,7 @@ import android.widget.ListView;
 public class MainActivity extends ListActivity {
 
 
-    private String[] titles = {"Flow的使用", "Layer的使用", "自定义ConstraintHelper", "Group", "围绕旋转", "点击布局重新排列", "模板功能", "动态替换", "Baseline 对齐"};
+    private String[] titles = {"Flow的使用", "Layer的使用", "自定义ConstraintHelper", "ImageFilterButton与ImageFilterView", "围绕旋转", "点击布局重新排列", "模板功能", "动态替换", "Baseline 对齐"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,9 @@ public class MainActivity extends ListActivity {
             case 2:
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.HELPER);
                 break;
-//            case 3:
-//                startActivity(new Intent(this, BarrierActivity.class));
-//                break;
+            case 3:
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.IMAGE);
+                break;
 //            case 4:
 //                startActivity(new Intent(this, CircleConstraintsActivity.class));
 //                break;

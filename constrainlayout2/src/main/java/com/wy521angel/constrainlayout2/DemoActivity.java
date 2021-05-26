@@ -15,6 +15,7 @@ public class DemoActivity extends AppCompatActivity {
     public static int FLOW = 1;
     public static int LAYER = 2;
     public static int HELPER = 3;
+    public static int IMAGE = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,9 @@ public class DemoActivity extends AppCompatActivity {
                     break;
                 case 3:
                     setContentView(R.layout.activity_constrainthelper);
+                    break;
+                case 4:
+                    setContentView(R.layout.activity_image);
                     break;
                 default:
                     break;

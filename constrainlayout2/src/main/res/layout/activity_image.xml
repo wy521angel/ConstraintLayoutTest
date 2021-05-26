@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toStartOf="@id/image2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="1" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toStartOf="@id/image3"
+            app:layout_constraintStart_toEndOf="@id/image1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="0.5" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="1" />
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image1"
+            app:round="10dp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:altSrc="@mipmap/gem2"
+            app:crossfade="0"
+            app:layout_constraintEnd_toStartOf="@id/image6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image4"
+            app:overlay="true"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="crossfade=0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image5"
+            app:layout_constraintStart_toStartOf="@id/image5"
+            app:layout_constraintTop_toBottomOf="@id/image5" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:altSrc="@mipmap/gem2"
+            app:crossfade="0.5"
+            app:layout_constraintEnd_toStartOf="@id/image7"
+            app:layout_constraintStart_toEndOf="@id/image5"
+            app:layout_constraintTop_toBottomOf="@id/image4"
+            app:overlay="true"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="crossfade=0.5"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image6"
+            app:layout_constraintStart_toStartOf="@id/image6"
+            app:layout_constraintTop_toBottomOf="@id/image6" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:altSrc="@mipmap/gem2"
+            app:crossfade="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image6"
+            app:layout_constraintTop_toBottomOf="@id/image4"
+            app:overlay="true"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="crossfade=1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image7"
+            app:layout_constraintStart_toStartOf="@id/image7"
+            app:layout_constraintTop_toBottomOf="@id/image7" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:layout_constraintEnd_toStartOf="@id/image9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image5"
+            app:round="20dp"
+            app:warmth="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="warmth=0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image8"
+            app:layout_constraintStart_toStartOf="@id/image8"
+            app:layout_constraintTop_toBottomOf="@id/image8" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:layout_constraintEnd_toStartOf="@id/image10"
+            app:layout_constraintStart_toEndOf="@id/image8"
+            app:layout_constraintTop_toBottomOf="@id/image5"
+            app:round="20dp"
+            app:warmth="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="warmth=1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image9"
+            app:layout_constraintStart_toStartOf="@id/image9"
+            app:layout_constraintTop_toBottomOf="@id/image9" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image10"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image9"
+            app:layout_constraintTop_toBottomOf="@id/image5"
+            app:round="20dp"
+            app:warmth="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="warmth=2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image10"
+            app:layout_constraintStart_toStartOf="@id/image10"
+            app:layout_constraintTop_toBottomOf="@id/image10" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image11"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:layout_constraintEnd_toStartOf="@id/image12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image8"
+            app:round="20dp"
+            app:saturation="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="saturation=0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image11"
+            app:layout_constraintStart_toStartOf="@id/image11"
+            app:layout_constraintTop_toBottomOf="@id/image11" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image12"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:layout_constraintEnd_toStartOf="@id/image13"
+            app:layout_constraintStart_toEndOf="@id/image11"
+            app:layout_constraintTop_toBottomOf="@id/image8"
+            app:round="20dp"
+            app:saturation="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="saturation=1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image12"
+            app:layout_constraintStart_toStartOf="@id/image12"
+            app:layout_constraintTop_toBottomOf="@id/image12" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image13"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image12"
+            app:layout_constraintTop_toBottomOf="@id/image8"
+            app:round="20dp"
+            app:saturation="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="saturation=2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image13"
+            app:layout_constraintStart_toStartOf="@id/image13"
+            app:layout_constraintTop_toBottomOf="@id/image13" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image14"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:brightness="0"
+            app:layout_constraintEnd_toStartOf="@id/image15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image11"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="brightness=0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image14"
+            app:layout_constraintStart_toStartOf="@id/image14"
+            app:layout_constraintTop_toBottomOf="@id/image14" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image15"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:brightness="1"
+            app:layout_constraintEnd_toStartOf="@id/image16"
+            app:layout_constraintStart_toEndOf="@id/image14"
+            app:layout_constraintTop_toBottomOf="@id/image11"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="brightness=1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image15"
+            app:layout_constraintStart_toStartOf="@id/image15"
+            app:layout_constraintTop_toBottomOf="@id/image15" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image16"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:brightness="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image15"
+            app:layout_constraintTop_toBottomOf="@id/image11"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="brightness=2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image16"
+            app:layout_constraintStart_toStartOf="@id/image16"
+            app:layout_constraintTop_toBottomOf="@id/image16" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image17"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:contrast="0"
+            app:layout_constraintEnd_toStartOf="@id/image18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image14"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="contrast=0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image17"
+            app:layout_constraintStart_toStartOf="@id/image17"
+            app:layout_constraintTop_toBottomOf="@id/image17" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image18"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:contrast="1"
+            app:layout_constraintEnd_toStartOf="@id/image19"
+            app:layout_constraintStart_toEndOf="@id/image17"
+            app:layout_constraintTop_toBottomOf="@id/image14"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="contrast=1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image18"
+            app:layout_constraintStart_toStartOf="@id/image18"
+            app:layout_constraintTop_toBottomOf="@id/image18" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/image19"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/gem1"
+            app:contrast="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image18"
+            app:layout_constraintTop_toBottomOf="@id/image15"
+            app:round="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="contrast=2"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/image19"
+            app:layout_constraintStart_toStartOf="@id/image19"
+            app:layout_constraintTop_toBottomOf="@id/image19" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
