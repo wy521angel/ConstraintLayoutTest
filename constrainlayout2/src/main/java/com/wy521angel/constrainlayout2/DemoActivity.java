@@ -16,6 +16,7 @@ public class DemoActivity extends AppCompatActivity {
     public static int LAYER = 2;
     public static int HELPER = 3;
     public static int IMAGE = 4;
+    public static int MOCKVIEW = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,9 @@ public class DemoActivity extends AppCompatActivity {
                     break;
                 case 4:
                     setContentView(R.layout.activity_image);
+                    break;
+                case 5:
+                    setContentView(R.layout.activity_mockview);
                     break;
                 default:
                     break;

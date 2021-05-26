@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mv_first"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mv_second"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toEndOf="@id/mv_first"
+        app:layout_constraintTop_toBottomOf="@id/mv_first" />
+
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mv_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/mv_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mv_second" />
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mv_2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/mv_3"
+        app:layout_constraintStart_toEndOf="@id/mv_1"
+        app:layout_constraintTop_toBottomOf="@id/mv_second"
+        app:mock_label="自定义"
+        app:mock_labelBackgroundColor="@android:color/holo_green_light"
+        app:mock_labelColor="@android:color/holo_purple" />
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mv_3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/mv_4"
+        app:layout_constraintStart_toEndOf="@id/mv_2"
+        app:layout_constraintTop_toBottomOf="@id/mv_second"
+        app:mock_diagonalsColor="@android:color/holo_purple" />
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mv_4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/mv_5"
+        app:layout_constraintStart_toEndOf="@id/mv_3"
+        app:layout_constraintTop_toBottomOf="@id/mv_second"
+        app:mock_diagonalsColor="@android:color/holo_purple"
+        app:mock_showDiagonals="false" />
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mv_5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mv_4"
+        app:layout_constraintTop_toBottomOf="@id/mv_second"
+        app:mock_diagonalsColor="@android:color/holo_purple"
+        app:mock_showLabel="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
