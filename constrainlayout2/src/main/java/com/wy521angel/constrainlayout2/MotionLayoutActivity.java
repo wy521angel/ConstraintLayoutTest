@@ -10,7 +10,7 @@ import android.widget.ListView;
 public class MotionLayoutActivity extends ListActivity {
 
 
-    private String[] titles = {"基本的使用", "位置关键帧", "属性关键帧", "ImageFilterButton与ImageFilterView", "MockView", "MotionLayout"};
+    private String[] titles = {"基本的使用", "位置关键帧", "属性关键帧", "自定义属性", "KeyCycle", "MotionLayout"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MotionLayoutActivity extends ListActivity {
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_3);
                 break;
             case 3:
-                intent.putExtra(DemoActivity.TYPE, DemoActivity.IMAGE);
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_4);
                 break;
             case 4:
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.MOCKVIEW);
