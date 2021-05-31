@@ -17,6 +17,9 @@ public class DemoActivity extends AppCompatActivity {
     public static int HELPER = 3;
     public static int IMAGE = 4;
     public static int MOCKVIEW = 5;
+    public static int MOTIONLAYOUT_1 = 6;
+    public static int MOTIONLAYOUT_2 = 7;
+    public static int MOTIONLAYOUT_3 = 8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,15 @@ public class DemoActivity extends AppCompatActivity {
                     break;
                 case 5:
                     setContentView(R.layout.activity_mockview);
+                    break;
+                case 6:
+                    setContentView(R.layout.activity_motionlayout1);
+                    break;
+                case 7:
+                    setContentView(R.layout.activity_motionlayout2);
+                    break;
+                case 8:
+                    setContentView(R.layout.activity_motionlayout3);
                     break;
                 default:
                     break;

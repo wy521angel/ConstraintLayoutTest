@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:defaultDuration="1000">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/view_start_status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <Motion app:pathMotionArc="startVertical" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/view_start_status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/view_start_status" />
+        <KeyFrameSet>
+            <KeyPosition
+                app:pathMotionArc="startHorizontal"
+                app:framePosition="50"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/view_start_status"
+                app:percentX="0.5"
+                app:percentY="0.5" />
+        </KeyFrameSet>
+
+    </Transition>
+</MotionScene>

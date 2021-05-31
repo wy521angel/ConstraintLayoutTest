@@ -7,15 +7,14 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MainActivity extends ListActivity {
+public class MotionLayoutActivity extends ListActivity {
 
 
-    private String[] titles = {"Flow的使用", "Layer的使用", "自定义ConstraintHelper", "ImageFilterButton与ImageFilterView", "MockView", "MotionLayout"};
+    private String[] titles = {"基本的使用", "位置关键帧", "属性关键帧", "ImageFilterButton与ImageFilterView", "MockView", "MotionLayout"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titles));
     }
 
@@ -25,10 +24,10 @@ public class MainActivity extends ListActivity {
         Intent intent = new Intent(this, DemoActivity.class);
         switch (position) {
             case 0:
-                intent.putExtra(DemoActivity.TYPE, DemoActivity.FLOW);
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_1);
                 break;
             case 1:
-                intent.putExtra(DemoActivity.TYPE, DemoActivity.LAYER);
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_2);
                 break;
             case 2:
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.HELPER);
@@ -40,7 +39,6 @@ public class MainActivity extends ListActivity {
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.MOCKVIEW);
                 break;
             case 5:
-                intent = new Intent(MainActivity.this, MotionLayoutActivity.class);
                 break;
         }
         startActivity(intent);
