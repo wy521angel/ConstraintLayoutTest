@@ -32,13 +32,19 @@
             app:clickAction="toggle"
             app:targetId="@id/view_start_status" />
         <KeyFrameSet>
-            <KeyPosition
-                app:pathMotionArc="startHorizontal"
+            <KeyAttribute
+                android:scaleX="0.1"
+                android:scaleY="0.1"
                 app:framePosition="50"
-                app:keyPositionType="parentRelative"
-                app:motionTarget="@id/view_start_status"
-                app:percentX="0.5"
-                app:percentY="0.5" />
+                app:motionTarget="@id/view_start_status" />
+            <KeyAttribute
+                android:alpha="0.1"
+                app:framePosition="50"
+                app:motionTarget="@id/view_start_status" />
+            <KeyAttribute
+                android:rotation="-45"
+                app:framePosition="50"
+                app:motionTarget="@id/view_start_status" />
         </KeyFrameSet>
 
     </Transition>

@@ -30,7 +30,7 @@ public class MotionLayoutActivity extends ListActivity {
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_2);
                 break;
             case 2:
-                intent.putExtra(DemoActivity.TYPE, DemoActivity.HELPER);
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_3);
                 break;
             case 3:
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.IMAGE);
