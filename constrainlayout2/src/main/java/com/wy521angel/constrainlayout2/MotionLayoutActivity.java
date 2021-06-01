@@ -36,7 +36,7 @@ public class MotionLayoutActivity extends ListActivity {
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_4);
                 break;
             case 4:
-                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOCKVIEW);
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_KEYCYCLE);
                 break;
             case 5:
                 break;

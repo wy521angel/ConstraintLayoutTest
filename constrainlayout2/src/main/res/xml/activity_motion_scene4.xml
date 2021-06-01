@@ -11,7 +11,6 @@
             android:layout_marginTop="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-            <Motion app:pathMotionArc="startVertical" />
         </Constraint>
     </ConstraintSet>
 
@@ -32,20 +31,13 @@
             app:clickAction="toggle"
             app:targetId="@id/view_start_status" />
         <KeyFrameSet>
-            <KeyAttribute
-                app:framePosition="0"
-                app:motionTarget="@id/view_start_status">
-                <CustomAttribute
-                    app:attributeName="BackgroundColor"
-                    app:customColorValue="#00ffff" />
-            </KeyAttribute>
-            <KeyAttribute
+            <KeyCycle
+                android:rotation="45"
                 app:framePosition="50"
-                app:motionTarget="@id/view_start_status">
-                <CustomAttribute
-                    app:attributeName="BackgroundColor"
-                    app:customColorValue="#00ff00" />
-            </KeyAttribute>
+                app:motionTarget="@id/view_start_status"
+                app:waveOffset="0"
+                app:wavePeriod="1"
+                app:waveShape="sin" />
         </KeyFrameSet>
 
     </Transition>
