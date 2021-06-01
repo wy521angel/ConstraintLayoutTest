@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_motion_scene6"
+    app:showPaths="true">
+
+    <View
+        android:id="@+id/view_start_status"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/black" />
+
+    <com.wy521angel.constrainlayout2.MyText
+        android:id="@+id/tv_text"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="200dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

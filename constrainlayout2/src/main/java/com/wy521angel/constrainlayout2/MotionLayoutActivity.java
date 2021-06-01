@@ -10,7 +10,7 @@ import android.widget.ListView;
 public class MotionLayoutActivity extends ListActivity {
 
 
-    private String[] titles = {"基本的使用", "位置关键帧", "属性关键帧", "自定义属性", "KeyCycle", "MotionLayout"};
+    private String[] titles = {"基本的使用", "位置关键帧", "属性关键帧", "自定义属性", "KeyCycle", "KeyTimeCycle", "KeyTrigger"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,10 @@ public class MotionLayoutActivity extends ListActivity {
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_KEYCYCLE);
                 break;
             case 5:
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_KEYTIMECYCLE);
+                break;
+            case 6:
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_KEYTRIGGER);
                 break;
         }
         startActivity(intent);

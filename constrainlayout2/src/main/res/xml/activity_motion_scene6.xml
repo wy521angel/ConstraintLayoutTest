@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:defaultDuration="1000">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/view_start_status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/view_start_status"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start">
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/view_start_status" />
+        <KeyFrameSet>
+            <KeyTrigger
+                app:framePosition="20"
+                app:motionTarget="@id/tv_text"
+                app:onCross="p0" />
+            <KeyTrigger
+                app:framePosition="50"
+                app:motionTarget="@id/tv_text"
+                app:onCross="p1" />
+            <KeyTrigger
+                app:framePosition="80"
+                app:motionTarget="@id/tv_text"
+                app:onCross="p2" />
+        </KeyFrameSet>
+
+    </Transition>
+</MotionScene>

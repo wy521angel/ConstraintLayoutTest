@@ -22,6 +22,8 @@ public class DemoActivity extends AppCompatActivity {
     public static int MOTIONLAYOUT_3 = 8;
     public static int MOTIONLAYOUT_4 = 9;
     public static int MOTIONLAYOUT_KEYCYCLE = 10;
+    public static int MOTIONLAYOUT_KEYTIMECYCLE = 11;
+    public static int MOTIONLAYOUT_KEYTRIGGER = 12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,12 @@ public class DemoActivity extends AppCompatActivity {
                     break;
                 case 10:
                     setContentView(R.layout.activity_keycycle);
+                    break;
+                case 11:
+                    setContentView(R.layout.activity_keytimecycle);
+                    break;
+                case 12:
+                    setContentView(R.layout.activity_keytrigger);
                     break;
                 default:
                     break;
