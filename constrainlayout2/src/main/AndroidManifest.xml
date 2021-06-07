@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".DemoActivity" />
         <activity android:name=".MotionLayoutActivity" />
+        <activity android:name=".AnimationActivity" />
+        <activity android:name=".FilmActivity"/>
+        <activity android:name=".FilmActivity2"/>
+        <activity android:name=".FilmActivity3"/>
     </application>
 
 </manifest>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end_scene"
+        app:constraintSetStart="@id/start_scene"
+        app:duration="200">
+
+<!--        &lt;!&ndash;    设置点击封面执行过渡动画    &ndash;&gt;-->
+<!--        <OnClick-->
+<!--            app:clickAction="toggle"-->
+<!--            app:targetId="@id/image_film_cover" />-->
+        <!--    设置向右拖动封面执行过渡动画    -->
+        <OnSwipe
+            app:dragDirection="dragEnd"
+            app:onTouchUp="stop"
+            app:touchAnchorId="@id/image_film_cover" />
+    </Transition>
+
+    <!--  因为开始场景已经默认设置在setContentView()，这里不设置也关系不大  -->
+    <ConstraintSet android:id="@+id/start_scene">
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end_scene">
+        <!--
+         结束场景的控件，在MotionLayout只会认Constraint
+         布局相关属性也可以写在<Constraint>标签下的<Layout>
+        -->
+
+        <Constraint
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/image_film_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            android:src="@drawable/film_cover"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/fab_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_bookmark"
+            android:tint="#FFD600"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </ConstraintSet>
+
+</MotionScene>

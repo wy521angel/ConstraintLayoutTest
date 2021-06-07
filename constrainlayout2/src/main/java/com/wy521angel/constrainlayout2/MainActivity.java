@@ -10,7 +10,8 @@ import android.widget.ListView;
 public class MainActivity extends ListActivity {
 
 
-    private String[] titles = {"Flow的使用", "Layer的使用", "自定义ConstraintHelper", "ImageFilterButton与ImageFilterView", "MockView", "MotionLayout"};
+    private String[] titles = {"Flow的使用", "Layer的使用", "自定义ConstraintHelper", "ImageFilterButton与ImageFilterView",
+            "MockView", "MotionLayout", "属性动画与过渡动画对比"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,9 @@ public class MainActivity extends ListActivity {
                 break;
             case 5:
                 intent = new Intent(MainActivity.this, MotionLayoutActivity.class);
+                break;
+            case 6:
+                intent = new Intent(MainActivity.this, AnimationActivity.class);
                 break;
         }
         startActivity(intent);
