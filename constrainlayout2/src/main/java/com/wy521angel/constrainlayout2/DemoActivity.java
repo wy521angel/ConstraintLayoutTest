@@ -13,7 +13,10 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.helper.widget.Layer;
+import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.constraintlayout.utils.widget.ImageFilterView;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.constraintlayout.widget.Constraints;
 
 public class DemoActivity extends AppCompatActivity {
 
@@ -34,6 +37,7 @@ public class DemoActivity extends AppCompatActivity {
     public static int ANIMATION_1 = 13;
     public static int ANIMATION_2 = 14;
     public static int MOTIONLAYOUT_TRANSFORM = 15;
+    public static int MOTIONLAYOUT_JAVA = 16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,11 +97,78 @@ public class DemoActivity extends AppCompatActivity {
                 case 15:
                     setContentView(R.layout.activity_transform);
                     break;
+                case 16:
+                    setContentView(R.layout.activity_java);
+                    doChange();
+                    break;
                 default:
                     break;
             }
         }
 
+    }
+
+    private void doChange() {
+        final MotionLayout motionLayout = findViewById(R.id.motionLayout);
+        Button btnState1 = findViewById(R.id.btnState1);
+        Button btnState2 = findViewById(R.id.btnState2);
+        btnState1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConstraintSet constraintSet = motionLayout.getConstraintSet(R.id.end);
+                ConstraintSet.Constraint constraint = constraintSet.getConstraint(R.id.box);
+                constraint.layout.topToTop = Constraints.LayoutParams.PARENT_ID;
+                constraint.layout.bottomToBottom = Constraints.LayoutParams.PARENT_ID;
+                constraint.layout.endToEnd = Constraints.LayoutParams.PARENT_ID;
+                //transform 可以改变旋转缩放等属性
+                constraint.transform.rotationY = 180f;
+                constraint.transform.rotationX = 0f;
+                constraint.transform.scaleY = 2f;
+                constraint.transform.scaleX = 2f;
+                constraint.propertySet.alpha = 0.1f;
+            }
+        });
+        btnState2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConstraintSet constraintSet = motionLayout.getConstraintSet(R.id.end);
+                ConstraintSet.Constraint constraint = constraintSet.getConstraint(R.id.box);
+                constraint.layout.topToTop = Constraints.LayoutParams.PARENT_ID;
+                constraint.layout.endToEnd = Constraints.LayoutParams.PARENT_ID;
+                //去除约束将View 放到右上角
+                constraint.layout.bottomToBottom = Constraints.LayoutParams.UNSET;
+                constraint.transform.rotationX = 180f;
+                constraint.transform.rotationY = 0f;
+            }
+        });
+
+        /**
+         * fix 动画在执行时，点击动画会重头开始问题
+         * 1.去掉xml中的<OnClick/>
+         * 2.自己编写对应的点击事件控制动画
+         * motionLayout 中有currentState、startState、endState
+         * startState 就是Transition的motion:constraintSetStart设置的id，endState同理
+         * 上述结论 在motionLayout的setTransition(int beginId, int endId)方法中可以看出
+         */
+        motionLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//            Log.i(TAG, "currentState: ${binding.motionLayout.currentState}")
+//            Log.i(TAG, "startState: ${binding.motionLayout.startState},R.id.start: ${R.id.start}")
+//            Log.i(TAG, "startState: ${binding.motionLayout.endState},R.id.end: ${R.id.end}")
+
+                //运动中currentState的值是-1 不做处理
+                if (motionLayout.getCurrentState() == -1) {
+                    return;
+                }
+
+                if (motionLayout.getCurrentState() == motionLayout.getStartState()) {
+                    motionLayout.transitionToEnd();
+                } else if (motionLayout.getCurrentState() == motionLayout.getEndState()) {
+                    motionLayout.transitionToStart();
+                }
+            }
+        });
     }
 
     private void doAnimation() {
