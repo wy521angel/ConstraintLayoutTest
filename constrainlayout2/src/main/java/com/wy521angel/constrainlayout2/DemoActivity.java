@@ -11,12 +11,24 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.helper.widget.Layer;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.constraintlayout.utils.widget.ImageFilterView;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.constraintlayout.widget.Constraints;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static androidx.fragment.app.FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT;
 
 public class DemoActivity extends AppCompatActivity {
 
@@ -38,6 +50,7 @@ public class DemoActivity extends AppCompatActivity {
     public static int ANIMATION_2 = 14;
     public static int MOTIONLAYOUT_TRANSFORM = 15;
     public static int MOTIONLAYOUT_JAVA = 16;
+    public static int MOTIONLAYOUT_VIEWPAGER = 17;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,11 +114,64 @@ public class DemoActivity extends AppCompatActivity {
                     setContentView(R.layout.activity_java);
                     doChange();
                     break;
+                case 17:
+                    setContentView(R.layout.activity_view_pager);
+                    initViewForViewPager();
+                    break;
                 default:
                     break;
             }
         }
 
+    }
+
+    private void initViewForViewPager() {
+        final List<Fragment> fragmentList = new ArrayList<>();
+        int[] avatars = {R.drawable.avatar1, R.drawable.avatar2, R.drawable.avatar3, R.drawable.avatar4};
+        final String[] titles = {"大雄", "胖虎", "小夫", "静香"};
+        for (int avatar : avatars) {
+            fragmentList.add(ItemFragment.newInstance(avatar));
+        }
+        final FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+            @NonNull
+            @Override
+            public Fragment getItem(int position) {
+                return fragmentList.get(position);
+            }
+
+            @Override
+            public int getCount() {
+                return fragmentList.size();
+            }
+
+            @Nullable
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return titles[position];
+            }
+        };
+
+        final MotionLayout motionLayout = findViewById(R.id.motionLayout);
+        ViewPager viewPager = findViewById(R.id.viewpager);
+        viewPager.setAdapter(adapter);
+        TabLayout tabLayout = findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                motionLayout.setProgress((position + positionOffset) / (adapter.getCount() - 1));
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void doChange() {

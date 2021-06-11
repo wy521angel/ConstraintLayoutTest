@@ -10,7 +10,8 @@ import android.widget.ListView;
 public class MotionLayoutActivity extends ListActivity {
 
 
-    private String[] titles = {"基本的使用", "位置关键帧", "属性关键帧", "自定义属性", "KeyCycle", "KeyTimeCycle", "KeyTrigger", "Constraint中Transform的使用", "使用代码控制"};
+    private String[] titles = {"基本的使用", "位置关键帧", "属性关键帧", "自定义属性", "KeyCycle",
+            "KeyTimeCycle", "KeyTrigger", "Constraint中Transform的使用", "使用代码控制","和ViewPager组合使用"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,9 @@ public class MotionLayoutActivity extends ListActivity {
                 break;
             case 8:
                 intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_JAVA);
+                break;
+            case 9:
+                intent.putExtra(DemoActivity.TYPE, DemoActivity.MOTIONLAYOUT_VIEWPAGER);
                 break;
         }
         startActivity(intent);
